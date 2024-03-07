@@ -3,7 +3,6 @@ import { server } from '../..';
 import axios from 'axios';
 import AddAppointment from '../components/AddAppointment';
 import { formatDate } from '../../utils/timeFunctions';
-import { useNavigate } from 'react-router-dom';
 const Appointment = () => {
   const [showModal, setShowModal] = useState(false)
   const [data, setData] = useState(null)
@@ -21,13 +20,11 @@ const Appointment = () => {
     })
   }
 
-const navigate = useNavigate();
 
   async function approveAppointment(id,value){
     
     await axios.patch(`${server}/api/v1/data/approval/${id}`,{approval:value}).then((res)=>{
       if(res?.data?.success===true){
-        navigate("/appointment");
         fetchDetails()
       }
     }).catch((error) => {

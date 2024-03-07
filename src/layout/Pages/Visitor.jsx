@@ -49,7 +49,7 @@ const Visitor = () => {
                                                         <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Phone no</th>
                                                         <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Purpose</th>
                                                         <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Appointmet Present</th>
-                                                        <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Waiting Time</th>
+                                                        <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Waiting Time (min)</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -61,7 +61,7 @@ const Visitor = () => {
                                                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">{ele?.Phone_Number}</td>
                                                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">{ele?.Purpose}</td>
                                                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">{ele?.Appointment_Present}</td>
-                                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">{ele?.Waiting_Time} minutes</td>
+                                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">{ele?.Waiting_Time}</td>
                                                             </tr>
                                                         })
                                     
