@@ -10,7 +10,7 @@ const Appointment = () => {
 
   async function fetchDetails() {
     await axios.get(`${server}/api/v1/view/appointmentDetails`).then((res) => {
-      if (res?.data?.success == true) {
+      if (res?.data?.success === true) {
         setData(res?.data?.appointments)
       }
       console.log(res)

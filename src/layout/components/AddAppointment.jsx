@@ -12,7 +12,7 @@ const Addvisitor = ({ setShowModal, fetchDetails }) => {
                   staffId: staffId,
                   visitorId: visitorId,
             }).then((res) => {
-                  if (res?.data?.success == true) {
+                  if (res?.data?.success === true) {
                         fetchDetails()
                   }
                   console.log(res)

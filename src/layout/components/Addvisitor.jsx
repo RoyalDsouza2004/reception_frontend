@@ -14,7 +14,7 @@ const Addvisitor = ({setShowModal,fetchDetails}) => {
             await axios.post(`${server}/api/v1/insert/add-visitor`,{
                   staffId,name,email,phone,purpose
             }).then((res)=>{
-                  if(res?.data?.success==true){
+                  if(res?.data?.success===true){
                         fetchDetails()
                   }
                   console.log(res)
