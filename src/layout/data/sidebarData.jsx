@@ -29,10 +29,4 @@ export const data=[
         name:"Appointment",
         url:"/layout/appointment"
     },
-    {
-        id:4,
-        icon:<CiLogout className="text-xl" />,
-        name:"Logout",
-        url:"/layout/logout"
-    },
 ]
