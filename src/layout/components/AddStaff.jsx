@@ -14,6 +14,11 @@ const AddStaff = ({setShowModal,fetchDetails}) => {
       async function handleSubmit(){
             await axios.post(`${server}/api/v1/insert/add-new-staff`,{
                   id,name,email,phone,role,department
+            },{
+              withCredentials: true,
+              headers: {
+                "Content-Type": "application/json",
+              },
             }).then((res)=>{
                   if(res?.data?.success===true){
                         fetchDetails()

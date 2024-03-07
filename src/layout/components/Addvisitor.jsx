@@ -13,6 +13,11 @@ const Addvisitor = ({setShowModal,fetchDetails}) => {
       async function handleSubmit(){
             await axios.post(`${server}/api/v1/insert/add-visitor`,{
                   staffId,name,email,phone,purpose
+            },{
+              withCredentials: true,
+              headers: {
+                "Content-Type": "application/json",
+              },
             }).then((res)=>{
                   if(res?.data?.success===true){
                         fetchDetails()

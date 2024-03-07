@@ -19,9 +19,12 @@ const Register = () => {
       id,
       email,
       password
-    } , {
-      withCredentials:true,
-    }).then((res)=>{
+    } ,{
+      withCredentials: true,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    } ).then((res)=>{
       if(res?.data?.success===true){
         navigate("/layout")
       }

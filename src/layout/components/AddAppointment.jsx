@@ -11,7 +11,12 @@ const Addvisitor = ({ setShowModal, fetchDetails }) => {
             await axios.post(`${server}/api/v1/insert/new-appointment`, {
                   staffId: staffId,
                   visitorId: visitorId,
-            }).then((res) => {
+            },{
+                  withCredentials: true,
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                }).then((res) => {
                   if (res?.data?.success === true) {
                         fetchDetails()
                   }

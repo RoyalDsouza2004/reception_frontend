@@ -10,7 +10,9 @@ const Staff = () => {
 
 
   async function fetchDetails() {
-      await axios.get(`${server}/api/v1/view/staffDetails`).then((res) => {
+      await axios.get(`${server}/api/v1/view/staffDetails` , {
+        withCredentials: true,
+      }).then((res) => {
           if (res?.data?.success === true) {
               setData(res?.data?.staff)
           }

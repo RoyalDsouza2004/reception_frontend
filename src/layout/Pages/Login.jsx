@@ -13,9 +13,12 @@ const Login = () => {
   async function submitHandler(){
     await axios.post(`${server}/api/v1/admin/login`,{
       email,
-      password
+      password, 
     },{
-      withCredentials:true,
+      withCredentials: true,
+      headers: {
+        "Content-Type": "application/json",
+      },
     }).then((res)=>{
       if(res?.data?.sucess===true){
         navigate("/layout")

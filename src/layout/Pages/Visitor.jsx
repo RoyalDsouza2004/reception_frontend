@@ -9,7 +9,9 @@ const Visitor = () => {
     const [data, setData] = useState(null)
 
     async function fetchDetails() {
-        await axios.get(`${server}/api/v1/view/visitorDetails`).then((res) => {
+        await axios.get(`${server}/api/v1/view/visitorDetails`,{
+            withCredentials: true,
+          }).then((res) => {
             if (res?.data?.success === true) {
                 setData(res?.data?.visitors)
             }
