@@ -2,7 +2,6 @@ import { RxDashboard } from "react-icons/rx";
 import { FaUsers } from "react-icons/fa";
 import { FaUserPlus } from "react-icons/fa";
 import { FaWpforms } from "react-icons/fa6";
-import { CiLogout } from "react-icons/ci";
 
 export const data=[
     {

@@ -2,6 +2,7 @@ import { Link, useNavigate} from "react-router-dom"
 import '../../index.css';
 import { useState } from "react";
 import axios from 'axios';
+import './style.css'
 import { server } from "../..";
 
 

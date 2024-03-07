@@ -38,6 +38,7 @@ const Appointment = () => {
     fetchDetails()
   }, [])
 
+
   return (
     <div className='px-8 pt-5'>
       <p className='uppercase font-semibold text-xl'>Appointment</p>
@@ -87,12 +88,12 @@ const Appointment = () => {
                                   }}></a>
                                 </td>
                                   : <td class="px-6 py-4">
-                                  <a href="#" class="font-medium text-green-600 dark:text-green-500 hover:underline" onClick={()=>{
-                                    approveAppointment(ele?.Appointment_ID,true)
-                                  }}>Approve</a>
-                                   <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ml-3" onClick={()=>{
-                                    approveAppointment(ele?.Appointment_ID,false)
-                                  }}>Cancel</a>
+                                  <button class="font-medium text-green-600 dark:text-green-500 hover:underline" onClick={()=>{
+                                    approveAppointment(ele?.Appointment_ID, true)
+                                  }}>Approve</button>
+                                   <button class="font-medium text-red-600 dark:text-red-500 hover:underline ml-3" onClick={()=>{
+                                    approveAppointment(ele?.Appointment_ID , false)
+                                  }}>Cancel</button>
                                 </td>
                                 }
                               </tr>

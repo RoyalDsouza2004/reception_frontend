@@ -3,6 +3,7 @@ import {  useState } from "react";
 import {  server } from "../../index.js";
 import '../../index.css';
 import axios from "axios";
+import './style.css'
 
 const Login = () => {
 
