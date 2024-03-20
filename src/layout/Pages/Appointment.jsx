@@ -79,7 +79,7 @@ const Appointment = () => {
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">{formatDate(ele?.Appointment_Date_Time)}</td>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">{ele?.Appointment_Status}</td>
                                 {
-                                  ele?.Appointment_Status === "Approved" ?
+                                 ( ele?.Appointment_Status === "Approved" || ele?.Appointment_Status === "Cancelled") ?
                                   <td class="px-6 py-4">
                                   <a href="#" class="font-medium text-green-600 dark:text-green-500 hover:underline" onClick={()=>{
                                     
